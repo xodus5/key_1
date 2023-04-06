@@ -37,22 +37,39 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="25dp"
         android:orientation="vertical"
-        android:rowCount="2">
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="150dp"/>
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="150dp"/>
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="150dp"/>
-        <Button
-            android:layout_width="150dp"
-            android:layout_height="150dp"/>
-    </GridLayout>
+        android:rowCount="2"
+        android:columnCount="2">
 
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="20dp"
+            android:layout_row="0" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="20dp"
+            android:layout_row="0"
+            android:layout_column="1" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="20dp"
+            android:layout_row="1"
+            android:layout_column="0" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="20dp"
+            android:layout_row="1"
+            android:layout_column="1" />
+
+    </GridLayout>
 
 
 </LinearLayout>

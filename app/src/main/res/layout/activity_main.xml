@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="어디로 갈까요?"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="40dp"
             android:gravity="center"
             android:textSize="40sp"/>
         <TextView
@@ -29,9 +29,10 @@
             android:textSize="20sp"/>
 
         <Button
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="15dp"
+            android:textSize="30sp"
             android:text="도움말"/>
     </LinearLayout>
 

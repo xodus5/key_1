@@ -43,6 +43,7 @@
         android:orientation="vertical">
 
         <Button
+            android:id="@+id/cafe_1"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_margin="35dp"

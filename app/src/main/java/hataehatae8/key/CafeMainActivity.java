@@ -10,18 +10,21 @@ import android.widget.Button;
 
 public class CafeMainActivity extends AppCompatActivity {
 
+    Button btn_menu1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cafe_main);
 
-        Button button = (Button) findViewById(R.id.c_menu1);
+        btn_menu1 = findViewById(R.id.c_menu1);
 
-        button.setOnClickListener(new View.OnClickListener() {
+        btn_menu1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CafeMainActivity.this, CafeMenuActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 

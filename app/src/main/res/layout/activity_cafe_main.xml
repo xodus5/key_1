@@ -16,6 +16,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/c_menu1"
             android:layout_width="170dp"
             android:layout_height="74dp"
             android:layout_margin="5dp"
@@ -23,6 +24,7 @@
             android:textSize="30sp" />
 
         <Button
+            android:id="@+id/c_menu2"
             android:layout_width="170dp"
             android:layout_height="74dp"
             android:layout_margin="5dp"
@@ -30,6 +32,7 @@
             android:textSize="30sp" />
 
         <Button
+            android:id="@+id/c_menu3"
             android:layout_width="170dp"
             android:layout_height="74dp"
             android:layout_margin="5dp"
@@ -46,6 +49,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/c_menu4"
             android:layout_width="170dp"
             android:layout_height="270dp"
             android:layout_margin="5dp"
@@ -53,6 +57,7 @@
             android:textSize="30sp" />
 
         <Button
+            android:id="@+id/c_menu5"
             android:layout_width="170dp"
             android:layout_height="270dp"
             android:layout_margin="5dp"
@@ -60,6 +65,7 @@
             android:textSize="30sp" />
 
         <Button
+            android:id="@+id/c_menu6"
             android:layout_width="170dp"
             android:layout_height="270dp"
             android:layout_margin="5dp"
@@ -67,6 +73,7 @@
             android:textSize="30sp" />
 
         <Button
+            android:id="@+id/c_menu7"
             android:layout_width="170dp"
             android:layout_height="270dp"
             android:layout_margin="5dp"
@@ -76,6 +83,7 @@
             android:textSize="30sp" />
 
         <Button
+            android:id="@+id/c_menu8"
             android:layout_width="170dp"
             android:layout_height="270dp"
             android:layout_margin="5dp"
@@ -83,6 +91,7 @@
             android:textSize="30sp" />
 
         <Button
+            android:id="@+id/c_menu9"
             android:layout_width="170dp"
             android:layout_height="270dp"
             android:layout_margin="5dp"
@@ -112,6 +121,7 @@
             android:textSize="30sp" />
 
         <Button
+            android:id="@+id/c_cash"
             android:layout_width="170dp"
             android:layout_height="190dp"
             android:layout_margin="5dp"

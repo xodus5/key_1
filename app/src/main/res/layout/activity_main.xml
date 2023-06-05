@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -20,65 +20,73 @@
             android:text="어디로 갈까요?"
             android:layout_marginTop="40dp"
             android:gravity="center"
-            android:textSize="40sp"/>
+            android:textSize="60sp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="30dp"
             android:text="장소를 선택해주세요."
-            android:textSize="20sp"/>
+            android:textSize="30sp"/>
 
         <Button
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
             android:layout_marginTop="15dp"
-            android:textSize="30sp"
+            android:textSize="35sp"
+            android:backgroundTint="#CCBF56"
             android:text="도움말"/>
     </LinearLayout>
 
     <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="635dp"
+        android:layout_height="662dp"
+        android:layout_gravity="center"
         android:layout_margin="30dp"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/cafe_1"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_row="0"
+            android:layout_column="0"
             android:layout_margin="35dp"
-            android:textSize="30sp"
-            android:text="카페"/>
+            android:backgroundTint="#6f4f28"
+            android:text="카페"
+            android:textSize="40sp" />
 
         <Button
             android:id="@+id/fast_1"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_row="1"
-            android:layout_column="0"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_row="0"
+            android:layout_column="1"
             android:layout_margin="35dp"
-            android:textSize="25sp"
-            android:text="패스트푸트점"/>
+            android:backgroundTint="#C15444"
+            android:text="패스트푸트점"
+            android:textSize="35sp" />
 
         <Button
             android:id="@+id/movie_1"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_row="0"
-            android:layout_column="2"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_row="1"
+            android:layout_column="0"
             android:layout_margin="35dp"
-            android:textSize="30sp"
-            android:text="영화관"/>
+            android:backgroundTint="#606A85"
+            android:text="영화관"
+            android:textSize="40sp" />
 
         <Button
             android:id="@+id/bank_1"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
             android:layout_row="1"
-            android:layout_column="2"
+            android:layout_column="1"
             android:layout_margin="35dp"
-            android:textSize="30sp"
-            android:text="은행"/>
+            android:backgroundTint="#663DC6"
+            android:text="은행"
+            android:textSize="40sp" />
 
     </GridLayout>
 

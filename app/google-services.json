@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "419085643162",
-    "project_id": "keyy-e63dd",
-    "storage_bucket": "keyy-e63dd.appspot.com"
+    "project_number": "674435242889",
+    "project_id": "keyy-f9a23",
+    "storage_bucket": "keyy-f9a23.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:419085643162:android:54a616e096037467a75e23",
+        "mobilesdk_app_id": "1:674435242889:android:1f63ac47170fd9129b9f58",
         "android_client_info": {
           "package_name": "hataehatae8.key"
         }
       },
       "oauth_client": [
         {
-          "client_id": "419085643162-k70u6ekeot4nfd9ujkoahqo25crnctlt.apps.googleusercontent.com",
+          "client_id": "674435242889-s4momoio92rn818ksqooic71beej980o.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "hataehatae8.key",
-            "certificate_hash": "191d754412591f8a84267d19366b159a9f5bb508"
+            "certificate_hash": "8744100db28a96817a6ac853c52cfb2da2becb04"
           }
         },
         {
-          "client_id": "419085643162-63pr36n3obe2l06qd467g9h68v4nhpad.apps.googleusercontent.com",
+          "client_id": "674435242889-lag8tanaikc2415l0mhbg0ft6rhht94v.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD93hIcFBq5tLGuJ2GoLo6SJ869aFDsxYU"
+          "current_key": "AIzaSyDzma2wm0iKYRE1fVvOKUK7P6EIyRLRsyw"
         }
       ],
       "services": {
@@ -36,6 +36,8 @@
           "other_platform_oauth_client": [
             {
               "client_id": "419085643162-63pr36n3obe2l06qd467g9h68v4nhpad.apps.googleusercontent.com",
+
+              "client_id": "674435242889-lag8tanaikc2415l0mhbg0ft6rhht94v.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

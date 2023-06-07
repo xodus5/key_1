@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button button = (Button) findViewById(R.id.cafe_1);
         Button button1 = (Button) findViewById(R.id.fast_1);
+        Button h_btn = (Button) findViewById(R.id.help);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        button1.setOnClickListener(new View.OnClickListener() {
+        h_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(MainActivity.this, FFMainActivity.class);
+                Intent intent1 = new Intent(MainActivity.this, HelpMainActivity.class);
                 startActivity(intent1);
             }
         });

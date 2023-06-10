@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".CafeMainActivity">
 
-<!--    메뉴 정보-->
+    <!--    메뉴 정보-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-
         android:orientation="horizontal">
 
         <ImageView
@@ -159,27 +159,28 @@
 
 
             </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_put"
+                android:layout_width="140dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:text="담기"
+                android:textSize="25sp" />
+
+
         </LinearLayout>
 
 
     </LinearLayout>
 
-
-<!--    담기 버튼-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_gravity="center"
-        >
-
-        <Button
-            android:layout_width="140dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center"
-            android:text="담기"
-            android:textSize="25sp" />
-
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/finger2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/finger2" />
 
 </LinearLayout>

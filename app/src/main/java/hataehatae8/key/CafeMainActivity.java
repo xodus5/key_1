@@ -17,6 +17,7 @@ public class CafeMainActivity extends AppCompatActivity {
 
     Button btn_menu1;
     ImageView fingerImageView;
+    boolean animationRunning = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +35,8 @@ public class CafeMainActivity extends AppCompatActivity {
                 float startY = fingerImageView.getY();
 
                 // 버튼 1로 finger 이동하는 위치 설정
-                float destinationX = btn_menu1.getX() + btn_menu1.getWidth() / 2 - fingerImageView.getWidth() / 5;
-                float destinationY = btn_menu1.getY() + btn_menu1.getHeight() / 2 - fingerImageView.getHeight() / 5;
+                float destinationX = btn_menu1.getX() + btn_menu1.getWidth() / 2 - fingerImageView.getWidth() / 4;
+                float destinationY = btn_menu1.getY() + btn_menu1.getHeight() - fingerImageView.getHeight() / 8;
 
                 ObjectAnimator animatorX = ObjectAnimator.ofFloat(fingerImageView, "x", startX, destinationX);
                 ObjectAnimator animatorY = ObjectAnimator.ofFloat(fingerImageView, "y", startY, destinationY);
@@ -43,6 +44,19 @@ public class CafeMainActivity extends AppCompatActivity {
                 AnimatorSet animatorSet = new AnimatorSet();
                 animatorSet.playTogether(animatorX, animatorY);
                 animatorSet.setDuration(1500);
+                animatorSet.addListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+                        // 애니메이션 시작 시 클릭 이벤트를 막습니다.
+                        animationRunning = true;
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        // 애니메이션 종료 시 클릭 이벤트를 다시 활성화합니다.
+                        animationRunning = false;
+                    }
+                });
                 animatorSet.start();
             }
         });
@@ -50,14 +64,15 @@ public class CafeMainActivity extends AppCompatActivity {
         btn_menu1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 버튼을 클릭했을 때
-                // 애니메이션 취소하고 finger 숨기기
-                fingerImageView.animate().cancel();
-                fingerImageView.setVisibility(View.INVISIBLE);
+                if (!animationRunning) {
+                    // 애니메이션이 실행 중이 아닐 때만 클릭 이벤트를 처리합니다.
+                    fingerImageView.animate().cancel();
+                    fingerImageView.setVisibility(View.INVISIBLE);
 
-                Intent intent = new Intent(CafeMainActivity.this, CafeMenuActivity.class);
-                startActivity(intent);
-                finish();
+                    Intent intent = new Intent(CafeMainActivity.this, CafeMenuActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
 

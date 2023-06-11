@@ -12,42 +12,39 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"
         android:theme="@style/Theme.Key"
-        android:requestLegacyExternalStorage="true"
         tools:targetApi="31">
-
         <activity
             android:name=".CashMainActivity"
             android:exported="false" />
-
         <activity
             android:name=".HelpMainActivity"
             android:exported="false"
             android:label="@string/title_activity_ffmain"
             android:theme="@style/Theme.Key.NoActionBar" />
-
         <activity
             android:name=".CafeMainActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
+            android:exported="false"/>
         <activity
             android:name=".CafeMenuActivity"
             android:exported="false" />
-
         <activity
             android:name=".HelpMainActivity1"
             android:exported="false" />
+        <activity
+            android:name=".intro"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

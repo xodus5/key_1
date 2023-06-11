@@ -34,7 +34,8 @@
             android:layout_height="160dp"
             android:layout_marginTop="15dp"
             android:textSize="35sp"
-            android:backgroundTint="#CCBF56"
+            android:backgroundTint="#CD8A8A"
+            android:textColor="#000000"
             android:text="도움말"/>
     </LinearLayout>
 
@@ -47,45 +48,53 @@
 
         <Button
             android:id="@+id/cafe_1"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_width="270dp"
+            android:layout_height="270dp"
             android:layout_row="0"
             android:layout_column="0"
-            android:layout_margin="35dp"
-            android:backgroundTint="#6f4f28"
+            android:layout_margin="30dp"
+            android:backgroundTint="#F3DFBF"
+            android:drawableBottom="@drawable/cafe_main_img"
+            android:textColor="#000000"
             android:text="카페"
             android:textSize="40sp" />
 
         <Button
             android:id="@+id/fast_1"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_width="270dp"
+            android:layout_height="270dp"
             android:layout_row="0"
             android:layout_column="1"
-            android:layout_margin="35dp"
-            android:backgroundTint="#C15444"
+            android:layout_margin="30dp"
+            android:backgroundTint="#F3C9BF"
+            android:drawableBottom="@drawable/ham_main_img"
             android:text="패스트푸트점"
+            android:textColor="#000000"
             android:textSize="35sp" />
 
         <Button
             android:id="@+id/movie_1"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_width="270dp"
+            android:layout_height="270dp"
             android:layout_row="1"
             android:layout_column="0"
-            android:layout_margin="35dp"
-            android:backgroundTint="#606A85"
+            android:layout_margin="30dp"
+            android:backgroundTint="#BFCEF3"
+            android:drawableBottom="@drawable/move_main_img"
+            android:textColor="#000000"
             android:text="영화관"
             android:textSize="40sp" />
 
         <Button
             android:id="@+id/bank_1"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_width="270dp"
+            android:layout_height="270dp"
             android:layout_row="1"
             android:layout_column="1"
-            android:layout_margin="35dp"
-            android:backgroundTint="#663DC6"
+            android:layout_margin="30dp"
+            android:backgroundTint="#D0F3BF"
+            android:drawableBottom="@drawable/bank_main_img"
+            android:textColor="#000000"
             android:text="은행"
             android:textSize="40sp" />
 

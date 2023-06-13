@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".CafeMainActivity">
+    tools:context=".Cafe_menudetail">
 
     <!--    메뉴 정보-->
     <LinearLayout

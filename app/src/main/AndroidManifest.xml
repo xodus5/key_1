@@ -17,13 +17,10 @@
         android:theme="@style/Theme.Key"
         tools:targetApi="31">
         <activity
-            android:name=".Main_menu"
+            android:name=".Public_cash"
             android:exported="false" />
         <activity
-            android:name=".CashMainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".Main"
             android:exported="false" />
         <activity
             android:name=".Cafe_menudetail"

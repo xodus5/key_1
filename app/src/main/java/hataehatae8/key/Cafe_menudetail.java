@@ -73,7 +73,7 @@ public class Cafe_menudetail extends AppCompatActivity {
                     fingerImageView.animate().cancel();
                     fingerImageView.setVisibility(View.INVISIBLE);
 
-                    Intent intent2 = new Intent(Cafe_menudetail.this, CashMainActivity.class);
+                    Intent intent2 = new Intent(Cafe_menudetail.this, Public_cash.class);
                     startActivity(intent2);
                     finish();
                 }
@@ -85,12 +85,6 @@ public class Cafe_menudetail extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.hide();
         }
-
-        // 받아온 데이터를 받을 리스트
-        ArrayList<Menu> menuList = new ArrayList<>();
-
-// 데이터 받아오기 : "menuName"이 "아이스아메리카노"인 데이터 가져오기
-
 
     }
 }

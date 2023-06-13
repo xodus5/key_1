@@ -31,7 +31,7 @@ public class Main_intro extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 // 메인 전환
-                Intent intent = new Intent(Main_intro.this, Main.class);
+                Intent intent = new Intent(Main_intro.this, Intro_Screen.class);
                 startActivity(intent);
                 finish();
             }

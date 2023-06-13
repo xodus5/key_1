@@ -17,6 +17,9 @@
         android:theme="@style/Theme.Key"
         tools:targetApi="31">
         <activity
+            android:name=".packaging_main"
+            android:exported="false" />
+        <activity
             android:name=".CashMainActivity"
             android:exported="false" />
         <activity
@@ -29,7 +32,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".CafeMenuActivity"
             android:exported="false" />

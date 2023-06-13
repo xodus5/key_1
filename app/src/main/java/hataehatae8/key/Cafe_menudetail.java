@@ -15,7 +15,7 @@ import android.widget.ImageView;
 
 import java.util.ArrayList;
 
-public class CafeMenuActivity extends AppCompatActivity {
+public class Cafe_menudetail extends AppCompatActivity {
 
     Button btn_put;
     ImageView fingerImageView;
@@ -24,7 +24,7 @@ public class CafeMenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cafe_menu);
+        setContentView(R.layout.cafe_menudetail);
 
         fingerImageView = findViewById(R.id.finger2);
         btn_put = findViewById(R.id.btn_put);
@@ -73,7 +73,7 @@ public class CafeMenuActivity extends AppCompatActivity {
                     fingerImageView.animate().cancel();
                     fingerImageView.setVisibility(View.INVISIBLE);
 
-                    Intent intent2 = new Intent(CafeMenuActivity.this, CashMainActivity.class);
+                    Intent intent2 = new Intent(Cafe_menudetail.this, CashMainActivity.class);
                     startActivity(intent2);
                     finish();
                 }

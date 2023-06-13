@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main_menu);
 
         Button button = (Button) findViewById(R.id.cafe_1);
         Button button1 = (Button) findViewById(R.id.fast_1);
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         h_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(MainActivity.this, HelpMainActivity.class);
+                Intent intent1 = new Intent(MainActivity.this, Help_main.class);
                 startActivity(intent1);
             }
         });

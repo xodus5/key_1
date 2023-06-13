@@ -17,30 +17,22 @@
         android:theme="@style/Theme.Key"
         tools:targetApi="31">
         <activity
-            android:name=".packaging_main"
+            android:name=".Main_menu"
             android:exported="false" />
         <activity
             android:name=".CashMainActivity"
             android:exported="false" />
         <activity
-            android:name=".HelpMainActivity"
-            android:exported="false"
-            android:label="@string/title_activity_ffmain"
-            android:theme="@style/Theme.Key.NoActionBar" />
-        <activity
-            android:name=".CafeMainActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".CafeMenuActivity"
+            android:name=".Cafe_menudetail"
             android:exported="false" />
         <activity
             android:name=".HelpMainActivity1"
             android:exported="false" />
         <activity
-            android:name=".intro"
+            android:name=".Main_intro"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

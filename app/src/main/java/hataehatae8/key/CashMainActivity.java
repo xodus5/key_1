@@ -9,6 +9,6 @@ public class CashMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cash_main);
+        setContentView(R.layout.public_cash);
     }
 }

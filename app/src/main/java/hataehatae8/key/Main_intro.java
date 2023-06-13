@@ -8,12 +8,12 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.ImageView;
 
-public class intro extends AppCompatActivity {
+public class Main_intro extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_intro);
+        setContentView(R.layout.main_intro);
 
         final ImageView introImageView = findViewById(R.id.intro_key);
         introImageView.setAlpha(1f);
@@ -31,7 +31,7 @@ public class intro extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 // 메인 전환
-                Intent intent = new Intent(intro.this, MainActivity.class);
+                Intent intent = new Intent(Main_intro.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }

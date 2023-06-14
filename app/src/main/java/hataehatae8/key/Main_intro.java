@@ -16,6 +16,10 @@ public class Main_intro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_intro);
 
+        // 액션바 없애기
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
         final ImageView introImageView = findViewById(R.id.intro_key);
         introImageView.setAlpha(1f);
 

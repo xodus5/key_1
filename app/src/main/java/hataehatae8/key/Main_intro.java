@@ -48,10 +48,5 @@ public class Main_intro extends AppCompatActivity {
 
         introImageView.startAnimation(fadeInAnimation);
 
-        // 액션바 없애기
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
-
-
     }
 }

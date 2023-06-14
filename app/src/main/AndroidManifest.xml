@@ -20,11 +20,6 @@
             android:name=".Intro_Screen"
             android:exported="false" />
         <activity
-            android:name=".Cafe_menu"
-            android:exported="false"
-            android:label="@string/title_activity_cafe_menu"
-            android:theme="@style/Theme.Key.NoActionBar" />
-        <activity
             android:name=".Public_cash"
             android:exported="false" />
         <activity

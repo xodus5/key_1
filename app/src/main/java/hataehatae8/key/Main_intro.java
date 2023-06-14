@@ -1,5 +1,6 @@
 package hataehatae8.key;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -42,6 +43,11 @@ public class Main_intro extends AppCompatActivity {
         });
 
         introImageView.startAnimation(fadeInAnimation);
-        
+
+        // 액션바 없애기
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
+
     }
 }

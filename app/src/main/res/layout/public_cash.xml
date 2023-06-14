@@ -4,8 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".Public_cash">
 
+    <GridLayout
+        android:layout_width="635dp"
+        android:layout_height="994dp"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cafe_1"
+            android:layout_width="270dp"
+            android:layout_height="440dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_margin="30dp"
+            android:backgroundTint="#F3DFBF"
+            android:drawableTop="@drawable/cafe_main_img"
+            android:text="카드결제"
+            android:textColor="#000000"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/movie_1"
+            android:layout_width="270dp"
+            android:layout_height="440dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_margin="30dp"
+            android:backgroundTint="#BFCEF3"
+            android:drawableTop="@drawable/move_main_img"
+            android:text="모바일쿠폰"
+            android:textColor="#000000"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/bank_1"
+            android:layout_width="270dp"
+            android:layout_height="440dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_margin="30dp"
+            android:backgroundTint="#D0F3BF"
+            android:drawableTop="@drawable/bank_main_img"
+            android:text="은행"
+            android:textColor="#000000"
+            android:textSize="40sp" />
+
+    </GridLayout>
 
 
 </LinearLayout>

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+
+    <style name="MyPopupTheme" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowIsFloating">true</item>
     </style>
+
+
 
 </resources>

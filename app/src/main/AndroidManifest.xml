@@ -20,11 +20,15 @@
             android:name=".Cafe_menu"
             android:exported="false" />
         <activity
+            android:name=".Test"
+            android:exported="false" />
+        <activity
             android:name=".Intro_Screen"
             android:exported="false" />
         <activity
             android:name=".Public_cash"
-            android:exported="false" />
+            android:theme="@style/Theme.AppCompat.Dialog">
+        </activity>
         <activity
             android:name=".Main"
             android:exported="false" />

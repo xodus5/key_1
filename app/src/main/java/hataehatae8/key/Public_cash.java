@@ -38,7 +38,7 @@ public class Public_cash extends AppCompatActivity {
                 int[] btnLocation = new int[2];
                 card.getLocationOnScreen(btnLocation);
                 float destinationX = btnLocation[0] + card.getWidth() / 2 - fingerImageView.getWidth() / 2;
-                float destinationY = btnLocation[1] + card.getHeight() / 2 - fingerImageView.getHeight() / 2;
+                float destinationY = btnLocation[1] + card.getHeight() / 2 - fingerImageView.getHeight() * 3;
 
                 ObjectAnimator animatorX = ObjectAnimator.ofFloat(fingerImageView, "x", startX, destinationX);
                 ObjectAnimator animatorY = ObjectAnimator.ofFloat(fingerImageView, "y", startY, destinationY);

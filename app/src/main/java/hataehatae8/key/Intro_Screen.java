@@ -1,14 +1,16 @@
 package hataehatae8.key;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,10 +19,12 @@ import androidx.viewpager.widget.ViewPager;
 
 public class Intro_Screen extends AppCompatActivity {
 
+    private ImageView fingerImageView;
+    private boolean animationRunning = false;
     private ViewPager viewPager;
-    Button btn_next;
-    private int[] images = {R.drawable.intro_1, R.drawable.intro_2, R.drawable.intro_3}; // 이미지 리소스 배열
-    private static final long SLIDE_DELAY = 3000; // 이미지 전환 간격 (3초)
+    private Button btn_next;
+    private int[] images = {R.drawable.intro_1, R.drawable.intro_2, R.drawable.intro_3};
+    private static final long SLIDE_DELAY = 2000; //2초
 
     private Handler handler;
     private Runnable runnable;
@@ -31,12 +35,12 @@ public class Intro_Screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro_screen);
 
+        fingerImageView = findViewById(R.id.finger1);
         viewPager = findViewById(R.id.viewPager);
-        btn_next = (Button) findViewById(R.id.btn_next);
+        btn_next = findViewById(R.id.btn_next);
 
         ImageAdapter imageAdapter = new ImageAdapter();
         viewPager.setAdapter(imageAdapter);
-
 
         for (int imageResource : images) {
             imageAdapter.addImage(imageResource);
@@ -62,16 +66,16 @@ public class Intro_Screen extends AppCompatActivity {
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intro_Screen.this, Main.class);
+                Intent intent = new Intent(Intro_Screen.this, Public_cash.class);
                 startActivity(intent);
             }
         });
 
-
         // 액션바 없애기
         ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
-
+        if (actionBar != null) {
+            actionBar.hide();
+        }
     }
 
     @Override
@@ -118,5 +122,46 @@ public class Intro_Screen extends AppCompatActivity {
             container.removeView((ImageView) object);
         }
 
+        @Override
+        public void setPrimaryItem(ViewGroup container, int position, Object object) {
+            super.setPrimaryItem(container, position, object);
+            if (!animationRunning) {
+                fingerImageView.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        // finger 초기 위치 설정
+                        float startX = fingerImageView.getX();
+                        float startY = fingerImageView.getY();
+
+                        // 버튼(btn_next)의 가운데 좌표 계산
+                        int[] btnLocation = new int[2];
+                        btn_next.getLocationOnScreen(btnLocation);
+                        float destinationX = btnLocation[0] + btn_next.getWidth() / 2 - fingerImageView.getWidth() / 2;
+                        float destinationY = btnLocation[1] + btn_next.getHeight() / 2 - fingerImageView.getHeight() / 2;
+
+                        ObjectAnimator animatorX = ObjectAnimator.ofFloat(fingerImageView, "x", startX, destinationX);
+                        ObjectAnimator animatorY = ObjectAnimator.ofFloat(fingerImageView, "y", startY, destinationY);
+
+                        AnimatorSet animatorSet = new AnimatorSet();
+                        animatorSet.playTogether(animatorX, animatorY);
+                        animatorSet.setDuration(1500);
+                        animatorSet.addListener(new AnimatorListenerAdapter() {
+                            @Override
+                            public void onAnimationStart(Animator animation) {
+                                // 애니메이션 시작 시 클릭 막기
+                                animationRunning = true;
+                            }
+
+                            @Override
+                            public void onAnimationEnd(Animator animation) {
+                                // 애니메이션 종료 시 다시 실행
+                                animationRunning = false;
+                            }
+                        });
+                        animatorSet.start();
+                    }
+                });
+            }
+        }
     }
 }

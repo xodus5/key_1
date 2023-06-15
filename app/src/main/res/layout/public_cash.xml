@@ -71,8 +71,8 @@
             android:layout_margin="30dp"
             android:padding="10dp"
             android:backgroundTint="#B8B8B8"
-            android:drawableTop="@drawable/cash_card"
-            android:text="카드결제"
+            android:drawableTop="@drawable/cash_coopon"
+            android:text="쿠폰사용"
             android:textSize="30sp"
             android:textColor="#000000" />
 
@@ -91,6 +91,12 @@
             android:textColor="#000000" />
 
     </GridLayout>
+
+    <ImageView
+        android:id="@+id/finger1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/finger2"/>
 
 
 

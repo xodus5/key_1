@@ -18,13 +18,13 @@ public class Main extends AppCompatActivity {
 
         btn_cafe = (Button) findViewById(R.id.cafe_1);
 
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(Main.this, 카페인트로(포장/먹고가기).class);
-//                startActivity(intent);
-//            }
-//        });
+        btn_cafe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Main.this, Intro_Screen.class);
+                startActivity(intent);
+            }
+        });
 
 
         // 액션바 없애기

@@ -20,9 +20,6 @@
             android:name=".Cafe_menu"
             android:exported="false" />
         <activity
-            android:name=".Test"
-            android:exported="false" />
-        <activity
             android:name=".Intro_Screen"
             android:exported="false" />
         <activity

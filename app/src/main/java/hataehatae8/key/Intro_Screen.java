@@ -66,7 +66,7 @@ public class Intro_Screen extends AppCompatActivity {
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intro_Screen.this, Public_cash.class);
+                Intent intent = new Intent(Intro_Screen.this, Cafe_menu.class);
                 startActivity(intent);
             }
         });

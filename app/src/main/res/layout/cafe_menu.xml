@@ -58,47 +58,21 @@
             android:layout_marginLeft="20dp" />
     </LinearLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="800dp"
-        android:layout_margin="30dp"
-        android:layout_marginTop="40sp">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/MenuView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <LinearLayout
+    <GridView
+        android:id="@+id/gv_menu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="600dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40sp"
-            android:gravity="center">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/selectMenuView"
-                android:layout_margin="30dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <Button
-            android:id="@+id/btn_cash"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="25dp"
-            android:text="결제하기"
-            android:textSize="20sp" />
-    </LinearLayout>
+        android:numColumns="3"/>
 
 
+    <Button
+        android:id="@+id/btn_cash"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:text="결제하기"
+        android:textSize="20sp" />
 </LinearLayout>

@@ -1,36 +1,63 @@
 package hataehatae8.key;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuView> {
-    @NonNull
-    @Override
-    public MenuAdapter.MenuView onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cafe_menudetail, viewGroup, false);
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.gif.GifBitmapProvider;
 
-        return new MenuView(view);
+import java.util.ArrayList;
+
+public class MenuAdapter extends BaseAdapter {
+    private ArrayList<MenuData> menuList;
+    private Context context;
+    LayoutInflater layoutInflater;
+
+    public MenuAdapter(ArrayList<MenuData> menuList, Context context) {
+        this.menuList = menuList;
+        this.context = context;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MenuAdapter.MenuView holder, int position) {
-
-    }
-
-    @Override
-    public int getItemCount() {
+    public int getCount() {
         return 0;
     }
 
-    public class MenuView extends RecyclerView.ViewHolder{
-        public MenuView(@NonNull View itemView) {
-            super(itemView);
-        }
+    @Override
+    public Object getItem(int i) {
+        return null;
+    }
 
+    @Override
+    public long getItemId(int i) {
+        return 0;
+    }
+
+    @Override
+    public View getView(int i, View view, ViewGroup viewGroup) {
+        if(layoutInflater == null) {
+            layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        }
+        if(view == null) {
+            view = layoutInflater.inflate(R.layout.cafe_menu_item,null);
+        }
+        ImageView gridImage = view.findViewById(R.id.gv_menu);
+        TextView gridName = view.findViewById(R.id.gv_name);
+        TextView gridPrice = view.findViewById(R.id.gv_name);
+
+        Glide.with(context).load(menuList.get(i).getMenu()).into(gridImage);
+        gridName.setText(menuList.get(i).getName());
+        gridPrice.setText(menuList.get(i).getPrice());
+
+        return view;
     }
 }

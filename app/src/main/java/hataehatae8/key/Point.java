@@ -13,18 +13,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class Public_cash extends AppCompatActivity {
+public class Point extends AppCompatActivity {
 
     private ImageView fingerImageView;
-    private Button card;
+    private Button no;
+
     private boolean animationRunning = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.public_cash);
+        setContentView(R.layout.activity_point);
         fingerImageView = findViewById(R.id.finger1);
-        card = findViewById(R.id.card);
+        no = findViewById(R.id.no);
 
 
         fingerImageView.post(new Runnable() {
@@ -36,9 +37,9 @@ public class Public_cash extends AppCompatActivity {
 
                 // 버튼(btn_next)의 가운데 좌표 계산
                 int[] btnLocation = new int[2];
-                card.getLocationOnScreen(btnLocation);
-                float destinationX = btnLocation[0] + card.getWidth() / 2 - fingerImageView.getWidth() / 2;
-                float destinationY = btnLocation[1] + card.getHeight() / 2 - fingerImageView.getHeight() * 3;
+                no.getLocationOnScreen(btnLocation);
+                float destinationX = btnLocation[0] + no.getWidth() / 2 - fingerImageView.getWidth() ;
+                float destinationY = btnLocation[1] + no.getHeight()  - fingerImageView.getHeight() * 7;
 
                 ObjectAnimator animatorX = ObjectAnimator.ofFloat(fingerImageView, "x", startX, destinationX);
                 ObjectAnimator animatorY = ObjectAnimator.ofFloat(fingerImageView, "y", startY, destinationY);
@@ -64,10 +65,10 @@ public class Public_cash extends AppCompatActivity {
 
         });
 
-        card.setOnClickListener(new View.OnClickListener() {
+        no.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Public_cash.this, Point.class);
+                Intent intent = new Intent(Point.this, Main.class);
                 startActivity(intent);
             }
         });
@@ -78,5 +79,4 @@ public class Public_cash extends AppCompatActivity {
             actionBar.hide();
         }
     }
-
 }

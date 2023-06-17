@@ -23,9 +23,11 @@
             android:name=".Intro_Screen"
             android:exported="false" />
         <activity
+            android:name=".Point"
+            android:theme="@style/Theme.AppCompat.Dialog"></activity>
+        <activity
             android:name=".Public_cash"
-            android:theme="@style/Theme.AppCompat.Dialog">
-        </activity>
+            android:theme="@style/Theme.AppCompat.Dialog"></activity>
         <activity
             android:name=".Main"
             android:exported="false" />
